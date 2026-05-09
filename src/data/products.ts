@@ -1,0 +1,38 @@
+export const products = [
+  {
+    slug: "iphone-17-pro",
+    name: "iPhone 17 Pro",
+    brand: "Apple",
+    category: "Смартфоны",
+    price: "от 109 990 ₽",
+    colors: ["#1f2937", "#d1d5db", "#0f3b66", "#f97316"],
+    description: "Премиальный смартфон Apple с мощной камерой и высокой производительностью.",
+  },
+  {
+    slug: "macbook-pro-14",
+    name: "MacBook Pro 14",
+    brand: "Apple",
+    category: "Ноутбуки",
+    price: "от 189 990 ₽",
+    colors: ["#4b5563", "#e5e7eb", "#111827"],
+    description: "Компактный профессиональный ноутбук для работы, дизайна и разработки.",
+  },
+  {
+    slug: "airpods-pro",
+    name: "AirPods Pro",
+    brand: "Apple",
+    category: "Наушники",
+    price: "от 24 990 ₽",
+    colors: ["#ffffff", "#000000"],
+    description: "Беспроводные наушники с активным шумоподавлением и чистым звуком.",
+  },
+  {
+    slug: "apple-watch-ultra",
+    name: "Apple Watch Ultra",
+    brand: "Apple",
+    category: "Умные часы",
+    price: "от 79 990 ₽",
+    colors: ["#27272a", "#d6d3d1", "#fb923c"],
+    description: "Прочные умные часы Apple для спорта, путешествий и повседневной жизни.",
+  },
+];
