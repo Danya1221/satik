@@ -2,14 +2,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 
-type ProductPageProps = {
-  params: {
-    slug: string;
-  };
-};
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = products.find((item) => item.slug === params.slug);
+  const product = products.find((item) => item.slug === slug);
 
   if (!product) {
     notFound();
@@ -68,9 +68,12 @@ export default function ProductPage({ params }: ProductPageProps) {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <button className="rounded-xl bg-blue-600 px-8 py-4 font-medium text-white transition-colors hover:bg-blue-500">
+              <Link
+                href="/cart"
+                className="rounded-xl bg-blue-600 px-8 py-4 font-medium text-white transition-colors hover:bg-blue-500"
+              >
                 Добавить в корзину
-              </button>
+              </Link>
 
               <button className="rounded-xl border border-white/10 bg-white/[0.03] px-8 py-4 font-medium transition-colors hover:border-blue-500/40 hover:bg-blue-500/10">
                 Получить консультацию
